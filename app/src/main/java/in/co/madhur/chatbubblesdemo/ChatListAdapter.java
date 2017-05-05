@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import in.co.madhur.chatbubblesdemo.model.ChatMessage;
 import in.co.madhur.chatbubblesdemo.model.Status;
 import in.co.madhur.chatbubblesdemo.model.UserType;
-import in.co.madhur.chatbubblesdemo.widgets.Emoji;
 
 /**
  * Created by madhur on 17/01/15.
@@ -70,7 +69,8 @@ public class ChatListAdapter extends BaseAdapter {
 
             }
 
-            holder1.messageTextView.setText(Emoji.replaceEmoji(message.getMessageText(), holder1.messageTextView.getPaint().getFontMetricsInt(), AndroidUtilities.dp(16)));
+            //holder1.messageTextView.setText(Emoji.replaceEmoji(message.getMessageText(), holder1.messageTextView.getPaint().getFontMetricsInt(), AndroidUtilities.dp(16)));
+            holder1.messageTextView.setText(message.getMessageText());
             holder1.timeTextView.setText(SIMPLE_DATE_FORMAT.format(message.getMessageTime()));
 
         } else if (message.getUserType() == UserType.OTHER) {
@@ -92,8 +92,8 @@ public class ChatListAdapter extends BaseAdapter {
 
             }
 
-            holder2.messageTextView.setText(Emoji.replaceEmoji(message.getMessageText(), holder2.messageTextView.getPaint().getFontMetricsInt(), AndroidUtilities.dp(16) ));
-            //holder2.messageTextView.setText(message.getMessageText());
+            //holder2.messageTextView.setText(Emoji.replaceEmoji(message.getMessageText(), holder2.messageTextView.getPaint().getFontMetricsInt(), AndroidUtilities.dp(16) ));
+            holder2.messageTextView.setText(message.getMessageText());
             holder2.timeTextView.setText(SIMPLE_DATE_FORMAT.format(message.getMessageTime()));
 
             if (message.getMessageStatus() == Status.DELIVERED) {

@@ -50,7 +50,7 @@
             android:layout_toLeftOf="@id/time_text"
 
             android:autoLink="web"
-            android:text="Rahul Agrawal is a good boy but he does not know what he wants." />
+            android:text="Hello" />
 
 
 

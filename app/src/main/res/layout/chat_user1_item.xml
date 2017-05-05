@@ -27,7 +27,7 @@
                 android:paddingTop="5dp"
                 android:textStyle="bold"
                 android:textColor="@color/orange"
-                android:text="User1"
+                android:text="ShopBot"
                 android:textSize="16sp" />
 
             <TextView
